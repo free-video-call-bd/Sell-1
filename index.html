@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100711">
+<title>Free Video Call APK | FreeServiceBD</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:Arial,sans-serif;
+background:radial-gradient(circle at top,#48102d,#100711 60%,#08060c);
+color:white;
+min-height:100vh;
+padding:15px;
+}
+
+.container{max-width:430px;margin:auto}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 2px 20px;
+}
+
+.logo{font-size:21px;font-weight:900}
+.logo span{color:#ff397d}
+
+.age{
+border:1px solid #ff397d;
+color:#ff6c9b;
+padding:6px 11px;
+border-radius:20px;
+font-size:12px;
+}
+
+.card{
+margin-top:18px;
+padding:24px 18px;
+border-radius:21px;
+text-align:center;
+background:linear-gradient(145deg,#291326,#160d1d);
+border:1px solid #a32c64;
+box-shadow:0 10px 35px #0008,0 0 25px #ff176b20;
+}
+
+.badge{
+display:inline-block;
+padding:7px 15px;
+border-radius:20px;
+background:#ff286d20;
+border:1px solid #ff397d;
+color:#ff80a9;
+font-size:12px;
+font-weight:bold;
+margin-bottom:18px;
+}
+
+.icon{
+width:75px;
+height:75px;
+margin:0 auto 16px;
+display:grid;
+place-items:center;
+border-radius:22px;
+font-size:35px;
+background:linear-gradient(135deg,#ff286d,#7525b9);
+box-shadow:0 5px 25px #ff286d55;
+}
+
+h1{font-size:27px;margin-bottom:10px}
+h1 span{color:#ff5790}
+
+.desc{
+font-size:13px;
+color:#c9afc1;
+line-height:1.8;
+}
+
+.warning{
+margin:20px 0;
+padding:13px;
+background:#ff286d12;
+border:1px solid #a32c64;
+border-radius:12px;
+color:#ffc1d4;
+font-size:12px;
+line-height:1.8;
+}
+
+.file{
+text-align:left;
+padding:14px;
+border-radius:12px;
+background:#ffffff09;
+border:1px solid #ffffff18;
+margin:18px 0;
+}
+
+.file strong{font-size:13px}
+.file p{
+font-size:11px;
+color:#bdaabb;
+margin-top:7px;
+}
+
+.download{
+display:block;
+width:100%;
+padding:17px;
+border:0;
+border-radius:12px;
+background:linear-gradient(100deg,#ff286d,#a52bdb);
+color:white;
+font-size:16px;
+font-weight:900;
+text-decoration:none;
+cursor:pointer;
+box-shadow:0 5px 25px #ff286d55;
+}
+
+.download:active{transform:scale(.97)}
+
+.note{
+font-size:10px;
+color:#a993a5;
+margin-top:12px;
+}
+
+footer{
+text-align:center;
+padding:25px 0 10px;
+font-size:11px;
+color:#917b8d;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<div class="logo">FreeService<span>BD</span></div>
+<div class="age">18+ ONLY</div>
+</header>
+
+<main>
+<div class="card">
+
+<div class="badge">ANDROID APPLICATION</div>
+
+<div class="icon">📱</div>
+
+<h1>Free <span>Video Call</span></h1>
+
+<p class="desc">
+Android Video Call Application
+</p>
+
+<div class="warning">
+<strong>APP INFORMATION</strong><br>
+Download the Android application using the button below.
+</div>
+
+<div class="file">
+<strong>📦 Live_video_call.apk</strong>
+<p>Android APK · <span id="size">Checking...</span></p>
+</div>
+
+<a class="download"
+href="./Live_video_call.apk"
+download="Live_video_call.apk">
+⬇ DOWNLOAD APK
+</a>
+
+<p class="note">
+FreeServiceBD · Android Application
+</p>
+
+</div>
+</main>
+
+<footer>
+© 2026 FreeServiceBD. All Rights Reserved.
+</footer>
+
+</div>
+
+<script>
+const apkURL = "./Live_video_call.apk";
+
+fetch(apkURL,{method:"HEAD"})
+.then(response=>{
+if(!response.ok) throw new Error();
+
+const size=response.headers.get("content-length");
+
+document.getElementById("size").textContent =
+size ? (Number(size)/1048576).toFixed(2)+" MB" : "APK File";
+})
+.catch(()=>{
+document.getElementById("size").textContent="APK File";
+});
+</script>
+
+</body>
+</html>
